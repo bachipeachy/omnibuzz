@@ -1,0 +1,21 @@
+# PyCharm / JetBrains
+.idea/
+*.iws
+*.iml
+*.ipr
+/wip
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python (if using scripts or venv for tools)
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local drafts or scratchpads (optional)
+drafts/
+notes-private.md
