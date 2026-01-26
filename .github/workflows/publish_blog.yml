@@ -1,0 +1,25 @@
+name: Publish Blog to WordPress
+
+on:
+  push:
+    paths:
+      - 'blog/**.md'
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: WordPress Posts Sync
+        uses: devrel-kr/wordpress-posts-sync@v1.0.0
+        with:
+          wp_url: ${{ secrets.WP_URL }}
+          wp_username: ${{ secrets.WP_USER }}
+          wp_password: ${{ secrets.WP_PASSWORD }}
+          post_folder: 'blog'
+          # Optional: Map frontmatter fields if you use them
+          # post_status: 'publish' # or 'draft' if you want to review first
