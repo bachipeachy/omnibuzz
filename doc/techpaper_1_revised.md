@@ -147,7 +147,7 @@ Protocol-governed systems decompose into eight orthogonal concerns. Each concern
         ▼                    ▼                    ▼
 ┌───────────────┐    ┌───────────────┐    ┌───────────────┐
 │   AUTHORING   │    │   PROTOCOL    │    │   TRANSPORT   │
-│   (Tooling)   │───▶│(Behavioral Law)│◀───│  (Interfaces) │
+│   (Tooling)   │───▶│(Behavioral Law)│◀──│  (Interfaces) │
 └───────────────┘    └───────┬───────┘    └───────────────┘
                              │
                     ┌────────┴────────┐
@@ -158,9 +158,9 @@ Protocol-governed systems decompose into eight orthogonal concerns. Each concern
             │   BINDING     │─│   (Interpreter)   │
             └───────────────┘ └─────────┬─────────┘
                                         │
-                        ┌───────────────┼───────────────┐
-                        │               │               │
-                        ▼               ▼               ▼
+                        ┌───────────────|
+                        │               │
+                        ▼               ▼
                 ┌───────────────┐ ┌───────────────┐
                 │     PURE      │ │  CONTROLLED   │
                 │  TRANSFORMS   │ │ SIDE EFFECTS  │
